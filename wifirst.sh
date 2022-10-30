@@ -9,7 +9,7 @@ CURR_URL=$(curl 'https://connect.wifirst.net/?perform=true' \
   -o "${AUTH_TOKEN_FILE}" \
   -w %{url_effective})
 
-for N_LOOP in {1..5}; do
+for _ in {1..5}; do
   echo "URL: ${CURR_URL}"
   case "${CURR_URL}" in
     https://connect.wifirst.net/?perform=true)
